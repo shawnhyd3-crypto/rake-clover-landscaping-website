@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Rake & Clover Landscaping Hamilton</title>
+    <meta name="description" content="Meet Jon, owner of Rake & Clover Landscaping. Serving Hamilton, Stoney Creek & Grimsby with quality lawn care and landscaping services.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-image { position: relative; }
+        .about-image .image-placeholder { aspect-ratio: 3/4; border-radius: 12px; }
+        .about-content h2 { color: var(--color-primary-dark); margin-bottom: 1.5rem; }
+        .about-content p { font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 1.5rem; }
+        .values-section { background: var(--color-bg-alt); }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .value-card { background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .value-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .value-card h3 { color: var(--color-primary-dark); margin-bottom: 0.75rem; }
+        .trust-badges { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .trust-badge { display: flex; align-items: center; gap: 0.75rem; background: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .trust-badge-icon { font-size: 1.5rem; }
+        .trust-badge-text { display: flex; flex-direction: column; }
+        .trust-badge-text strong { color: var(--color-primary-dark); }
+        .trust-badge-text span { font-size: 0.875rem; color: var(--color-text-muted); }
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .values-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🍀</span>
+                    <span class="logo-text">Rake & Clover</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="tel:2898150431" class="btn btn-primary nav-cta">
+                    <span class="phone-icon">📞</span>
+                    <span class="phone-text">(289) 815-0431</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%); color: white; padding: 140px 0 80px; text-align: center;">
+        <div class="container">
+            <span class="section-label" style="color: var(--color-accent);">Who We Are</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem;">About Rake & Clover</h1>
+            <p style="font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">A local landscaping company built on hard work, reliability, and a genuine love for the outdoors.</p>
+        </div>
+    </section>
+
+    <section style="padding: 5rem 0;">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span>📸 Photo of Jon</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label">Meet Jon</span>
+                    <h2>The Person Behind Rake & Clover</h2>
+                    <p>Hi, I'm Jon — the owner and operator of Rake & Clover Landscaping. I started this company with a simple goal: to help homeowners in Hamilton and the surrounding areas take pride in their outdoor spaces.</p>
+                    <p>What began as a side hustle has grown into a full-service landscaping business, but the approach hasn't changed. I still show up on time, do thorough work, and treat every property like it's my own.</p>
+                    <p>When I'm not working, you'll find me [personal detail - Jon to fill in], or spending time with my family here in [location]. I'm proud to call this community home.</p>
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Values</span>
+                <h2 class="section-title">How We Work</h2>
+                <p class="section-subtitle">These principles guide everything we do.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">⏰</div>
+                    <h3>Reliability</h3>
+                    <p>We show up when we say we will. No surprises, no waiting around wondering if your landscaper will arrive.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Attention to Detail</h3>
+                    <p>We don't cut corners. From crisp edges to thorough cleanups, the small things matter.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💬</div>
+                    <h3>Clear Communication</h3>
+                    <p>You'll always know what to expect. No hidden fees, no surprise charges, no confusion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 5rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Why Trust Us</span>
+                <h2 class="section-title">Built on Trust</h2>
+                <p class="section-subtitle">Credentials and guarantees that give you peace of mind.</p>
+            </div>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🛡️</div>
+                    <div class="trust-badge-text">
+                        <strong>Fully Insured</strong>
+                        <span>Liability coverage for your protection</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">⭐</div>
+                    <div class="trust-badge-text">
+                        <strong>5-Star Rating</strong>
+                        <span>Based on Google reviews</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🤝</div>
+                    <div class="trust-badge-text">
+                        <strong>Satisfaction Guaranteed</strong>
+                        <span>Not happy? We'll make it right</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🏠</div>
+                    <div class="trust-badge-text">
+                        <strong>Local & Independent</strong>
+                        <span>Hamilton-based, community-focused</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-area" style="background: var(--color-bg-alt); padding: 5rem 0;">
+        <div class="container">
+            <div class="service-area-grid">
+                <div class="service-area-content">
+                    <span class="section-label">Service Area</span>
+                    <h2 class="section-title">Proudly Serving Hamilton & Beyond</h2>
+                    <p>We're based in Hamilton and serve homeowners throughout the surrounding communities. If you're not sure if we cover your area, just ask!</p>
+                    <ul class="location-list">
+                        <li><span class="location-icon">📍</span> Hamilton</li>
+                        <li><span class="location-icon">📍</span> Stoney Creek</li>
+                        <li><span class="location-icon">📍</span> Grimsby</li>
+                        <li><span class="location-icon">📍</span> Ancaster</li>
+                        <li><span class="location-icon">📍</span> Dundas</li>
+                        <li><span class="location-icon">📍</span> Binbrook</li>
+                    </ul>
+                </div>
+                <div class="service-area-map">
+                    <div class="map-placeholder">
+                        <span>🗺️ Service Area Map</span>
+                        <small>Hamilton & surrounding area</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Work Together?</h2>
+                <p>Call <strong>(289) 815-0431</strong> and let's talk about your yard.</p>
+                <div class="cta-buttons">
+                    <a href="tel:2898150431" class="btn btn-large btn-white">
+                        <span>📞 Call (289) 815-0431</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-large btn-outline-white">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🍀</span>
+                        <span class="logo-text">Rake & Clover</span>
+                    </a>
+                    <p>Professional landscaping services in Hamilton, Stoney Creek & Grimsby.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#lawn-care">Lawn Care</a></li>
+                        <li><a href="services.html#hedge-trimming">Hedge Trimming</a></li>
+                        <li><a href="services.html#mulch">Mulch & Garden Beds</a></li>
+                        <li><a href="services.html#seasonal">Seasonal Cleanup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><a href="tel:2898150431">📞 (289) 815-0431</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rake & Clover Landscaping</p>
+                <p class="credit">Website by <a href="https://hydetech.ca" target="_blank">Hyde Tech Solutions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-call-bar">
+        <a href="tel:2898150431" class="mobile-call-btn">
+            <span>📞</span>
+            <span>Call Now</span>
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

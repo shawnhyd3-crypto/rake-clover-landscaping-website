@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Rake & Clover Landscaping Hamilton</title>
+    <meta name="description" content="Professional landscaping services in Hamilton. Lawn care, hedge trimming, mulch, pet waste removal, seasonal cleanup. Free quotes. Call (289) 815-0431.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        .service-detail { padding: 4rem 0; }
+        .service-detail:nth-child(even) { background-color: var(--color-bg-alt); }
+        .service-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .service-detail:nth-child(even) .service-detail-grid { direction: rtl; }
+        .service-detail:nth-child(even) .service-detail-content { direction: ltr; }
+        .service-detail-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .service-features { margin: 1.5rem 0; }
+        .service-features li { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .service-features li::before { content: '✓'; color: var(--color-accent); font-weight: bold; }
+        .pricing-note { background: #e8f5e9; padding: 1rem 1.5rem; border-radius: 8px; margin-top: 1.5rem; }
+        @media (max-width: 768px) {
+            .service-detail-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .service-detail:nth-child(even) .service-detail-grid { direction: ltr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🍀</span>
+                    <span class="logo-text">Rake & Clover</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="tel:2898150431" class="btn btn-primary nav-cta">
+                    <span class="phone-icon">📞</span>
+                    <span class="phone-text">(289) 815-0431</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%); color: white; padding: 140px 0 80px; text-align: center;">
+        <div class="container">
+            <span class="section-label" style="color: var(--color-accent);">What We Offer</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem;">Our Services</h1>
+            <p style="font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">From weekly lawn maintenance to seasonal cleanups, we keep your outdoor space looking its best.</p>
+        </div>
+    </section>
+
+    <!-- Lawn Care -->
+    <section class="service-detail" id="lawn-care">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">🌿</div>
+                    <h2>Lawn Care</h2>
+                    <p>A healthy, green lawn is the foundation of a beautiful yard. Our comprehensive lawn care services keep your grass thriving through every season.</p>
+                    <ul class="service-features">
+                        <li>Weekly or bi-weekly mowing with professional equipment</li>
+                        <li>Edging along driveways, walkways, and flower beds</li>
+                        <li>Trimming around trees, fences, and obstacles</li>
+                        <li>Seasonal fertilizing for optimal growth</li>
+                        <li>Weed control and prevention</li>
+                        <li>Core aeration (seasonal)</li>
+                    </ul>
+                    <div class="pricing-note">
+                        <strong>💡 Pricing:</strong> Starting at $40/visit for average-sized lawns. Contact us for a free, no-obligation quote.
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
+                    </div>
+                </div>
+                <div class="service-detail-image">
+                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
+                        <span>📸 Lawn Care Photo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hedge Trimming -->
+    <section class="service-detail" id="hedge-trimming">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">✂️</div>
+                    <h2>Hedge Trimming</h2>
+                    <p>Well-maintained hedges and shrubs add structure and elegance to your landscape. Our precision trimming keeps them healthy and beautifully shaped.</p>
+                    <ul class="service-features">
+                        <li>Precision trimming for clean, straight edges</li>
+                        <li>Shaping and sculpting for aesthetic appeal</li>
+                        <li>Removal of dead or diseased branches</li>
+                        <li>Height reduction and thinning</li>
+                        <li>Cleanup and debris removal</li>
+                        <li>Seasonal maintenance schedules available</li>
+                    </ul>
+                    <div class="pricing-note">
+                        <strong>💡 Pricing:</strong> Based on linear footage and height. Most residential jobs range from $75-$200.
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
+                    </div>
+                </div>
+                <div class="service-detail-image">
+                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
+                        <span>📸 Hedge Trimming Photo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mulch & Garden Beds -->
+    <section class="service-detail" id="mulch">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">🪴</div>
+                    <h2>Mulch & Garden Beds</h2>
+                    <p>Fresh mulch not only looks great—it protects your plants, retains moisture, and suppresses weeds. We install and maintain beautiful garden beds.</p>
+                    <ul class="service-features">
+                        <li>Mulch delivery and installation</li>
+                        <li>Multiple mulch types available (cedar, pine, coloured)</li>
+                        <li>Garden bed edging and definition</li>
+                        <li>Weed removal before mulching</li>
+                        <li>Seasonal bed maintenance</li>
+                        <li>Top-dressing existing beds</li>
+                    </ul>
+                    <div class="pricing-note">
+                        <strong>💡 Pricing:</strong> $85-$120 per cubic yard installed, including delivery and cleanup.
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
+                    </div>
+                </div>
+                <div class="service-detail-image">
+                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
+                        <span>📸 Mulch & Garden Photo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pet Waste Removal -->
+    <section class="service-detail" id="pet-waste">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">🐕</div>
+                    <h2>Pet Waste Removal</h2>
+                    <p>Enjoy your yard without the mess. Our pet waste removal service keeps your lawn clean, sanitary, and ready for family time.</p>
+                    <ul class="service-features">
+                        <li>Weekly or bi-weekly yard cleanup</li>
+                        <li>One-time deep cleanings available</li>
+                        <li>Disposal included (we take it with us)</li>
+                        <li>Sanitizing spray available</li>
+                        <li>Flexible scheduling</li>
+                        <li>Perfect for busy pet owners</li>
+                    </ul>
+                    <div class="pricing-note">
+                        <strong>💡 Pricing:</strong> Starting at $20/week for one dog. Discounts for multiple dogs and prepaid packages.
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
+                    </div>
+                </div>
+                <div class="service-detail-image">
+                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
+                        <span>📸 Clean Yard Photo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Cleanup -->
+    <section class="service-detail" id="seasonal">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">🍂</div>
+                    <h2>Seasonal Cleanup</h2>
+                    <p>Spring and fall cleanups prepare your yard for the season ahead. We handle the heavy lifting so you don't have to.</p>
+                    <ul class="service-features">
+                        <li><strong>Spring Cleanup:</strong> Remove winter debris, cut back perennials, prepare beds</li>
+                        <li><strong>Fall Cleanup:</strong> Leaf removal, cut back plants, winter preparation</li>
+                        <li>Dead plant and branch removal</li>
+                        <li>Bed edging and redefinition</li>
+                        <li>Complete debris removal</li>
+                        <li>One-time or recurring service</li>
+                    </ul>
+                    <div class="pricing-note">
+                        <strong>💡 Pricing:</strong> Spring/fall cleanups start at $200 for average properties. Based on yard size and condition.
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
+                    </div>
+                </div>
+                <div class="service-detail-image">
+                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
+                        <span>📸 Seasonal Cleanup Photo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaf Removal -->
+    <section class="service-detail" id="leaf-removal">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">🍁</div>
+                    <h2>Leaf Removal</h2>
+                    <p>Don't let fallen leaves smother your lawn. Our thorough leaf removal service keeps your property neat through the autumn months.</p>
+                    <ul class="service-features">
+                        <li>Complete leaf collection from lawn and beds</li>
+                        <li>Blowing and raking of all areas</li>
+                        <li>Curb-side bagging for municipal pickup</li>
+                        <li>Or we haul away the leaves</li>
+                        <li>One-time or weekly service</li>
+                        <li>Gutter cleaning available as add-on</li>
+                    </ul>
+                    <div class="pricing-note">
+                        <strong>💡 Pricing:</strong> One-time removal from $150. Weekly service available during peak season.
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
+                        <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
+                    </div>
+                </div>
+                <div class="service-detail-image">
+                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
+                        <span>📸 Leaf Removal Photo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Not Sure What You Need?</h2>
+                <p>Call Sarah anytime at <strong>(289) 815-0431</strong> and Jon will help you figure out the right services for your yard.</p>
+                <div class="cta-buttons">
+                    <a href="tel:2898150431" class="btn btn-large btn-white">
+                        <span>📞 Call (289) 815-0431</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-large btn-outline-white">Request a Quote Online</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🍀</span>
+                        <span class="logo-text">Rake & Clover</span>
+                    </a>
+                    <p>Professional landscaping services in Hamilton, Stoney Creek & Grimsby.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#lawn-care">Lawn Care</a></li>
+                        <li><a href="services.html#hedge-trimming">Hedge Trimming</a></li>
+                        <li><a href="services.html#mulch">Mulch & Garden Beds</a></li>
+                        <li><a href="services.html#seasonal">Seasonal Cleanup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><a href="tel:2898150431">📞 (289) 815-0431</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rake & Clover Landscaping</p>
+                <p class="credit">Website by <a href="https://hydetech.ca" target="_blank">Hyde Tech Solutions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-call-bar">
+        <a href="tel:2898150431" class="mobile-call-btn">
+            <span>📞</span>
+            <span>Call Now</span>
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
