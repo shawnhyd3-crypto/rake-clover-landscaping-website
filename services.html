@@ -15,11 +15,12 @@
         .service-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .service-detail:nth-child(even) .service-detail-grid { direction: rtl; }
         .service-detail:nth-child(even) .service-detail-content { direction: ltr; }
-        .service-detail-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .service-detail-icon { width: 64px; height: 64px; color: var(--color-primary); margin-bottom: 1rem; }
         .service-features { margin: 1.5rem 0; }
         .service-features li { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
-        .service-features li::before { content: '✓'; color: var(--color-accent); font-weight: bold; }
+        .service-features li svg { width: 20px; height: 20px; color: var(--color-accent); flex-shrink: 0; }
         .pricing-note { background: #e8f5e9; padding: 1rem 1.5rem; border-radius: 8px; margin-top: 1.5rem; }
+        .service-detail-image img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         @media (max-width: 768px) {
             .service-detail-grid { grid-template-columns: 1fr; gap: 2rem; }
             .service-detail:nth-child(even) .service-detail-grid { direction: ltr; }
@@ -27,17 +28,27 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <svg style="display: none;">
+        <defs>
+            <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+            <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></symbol>
+            <symbol id="icon-lawn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22h20M2 22l2-8 3 8M9 22l3-12 3 12M16 22l3-8 2 8M2 12h20"/></symbol>
+            <symbol id="icon-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></symbol>
+            <symbol id="icon-plant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 20h10M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.6 3.2-.6 4.4.3 1.1.8 1.9 2.3 2.4 4.5-3.1.5-5.1-.2-6.2-1.1"/></symbol>
+            <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+            <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+            <symbol id="icon-paw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12s2-4 4-4 4 4 4 4-2 4-4 4-4-4-4-4Z"/></symbol>
+        </defs>
+    </svg>
+
     <header class="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <span class="logo-icon">🍀</span>
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     <span class="logo-text">Rake & Clover</span>
                 </a>
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span><span></span><span></span>
-                </button>
+                <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
@@ -46,14 +57,13 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <a href="tel:2898150431" class="btn btn-primary nav-cta">
-                    <span class="phone-icon">📞</span>
+                    <svg class="icon phone-icon"><use href="#icon-phone"/></svg>
                     <span class="phone-text">(289) 815-0431</span>
                 </a>
             </nav>
         </div>
     </header>
 
-    <!-- Page Header -->
     <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%); color: white; padding: 140px 0 80px; text-align: center;">
         <div class="container">
             <span class="section-label" style="color: var(--color-accent);">What We Offer</span>
@@ -62,230 +72,195 @@
         </div>
     </section>
 
-    <!-- Lawn Care -->
     <section class="service-detail" id="lawn-care">
         <div class="container">
             <div class="service-detail-grid">
                 <div class="service-detail-content">
-                    <div class="service-detail-icon">🌿</div>
+                    <svg class="service-detail-icon"><use href="#icon-lawn"/></svg>
                     <h2>Lawn Care</h2>
                     <p>A healthy, green lawn is the foundation of a beautiful yard. Our comprehensive lawn care services keep your grass thriving through every season.</p>
                     <ul class="service-features">
-                        <li>Weekly or bi-weekly mowing with professional equipment</li>
-                        <li>Edging along driveways, walkways, and flower beds</li>
-                        <li>Trimming around trees, fences, and obstacles</li>
-                        <li>Seasonal fertilizing for optimal growth</li>
-                        <li>Weed control and prevention</li>
-                        <li>Core aeration (seasonal)</li>
+                        <li><svg><use href="#icon-check"/></svg> Weekly or bi-weekly mowing with professional equipment</li>
+                        <li><svg><use href="#icon-check"/></svg> Edging along driveways, walkways, and flower beds</li>
+                        <li><svg><use href="#icon-check"/></svg> Trimming around trees, fences, and obstacles</li>
+                        <li><svg><use href="#icon-check"/></svg> Seasonal fertilizing for optimal growth</li>
+                        <li><svg><use href="#icon-check"/></svg> Weed control and prevention</li>
+                        <li><svg><use href="#icon-check"/></svg> Core aeration (seasonal)</li>
                     </ul>
-                    <div class="pricing-note">
-                        <strong>💡 Pricing:</strong> Starting at $40/visit for average-sized lawns. Contact us for a free, no-obligation quote.
-                    </div>
+                    <div class="pricing-note"><strong>Pricing:</strong> Starting at $40/visit for average-sized lawns. Contact us for a free quote.</div>
                     <div style="margin-top: 2rem;">
                         <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
                         <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
                     </div>
                 </div>
                 <div class="service-detail-image">
-                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
-                        <span>📸 Lawn Care Photo</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=80" alt="Professional lawn care service">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Hedge Trimming -->
     <section class="service-detail" id="hedge-trimming">
         <div class="container">
             <div class="service-detail-grid">
                 <div class="service-detail-content">
-                    <div class="service-detail-icon">✂️</div>
+                    <svg class="service-detail-icon"><use href="#icon-scissors"/></svg>
                     <h2>Hedge Trimming</h2>
                     <p>Well-maintained hedges and shrubs add structure and elegance to your landscape. Our precision trimming keeps them healthy and beautifully shaped.</p>
                     <ul class="service-features">
-                        <li>Precision trimming for clean, straight edges</li>
-                        <li>Shaping and sculpting for aesthetic appeal</li>
-                        <li>Removal of dead or diseased branches</li>
-                        <li>Height reduction and thinning</li>
-                        <li>Cleanup and debris removal</li>
-                        <li>Seasonal maintenance schedules available</li>
+                        <li><svg><use href="#icon-check"/></svg> Precision trimming for clean, straight edges</li>
+                        <li><svg><use href="#icon-check"/></svg> Shaping and sculpting for aesthetic appeal</li>
+                        <li><svg><use href="#icon-check"/></svg> Removal of dead or diseased branches</li>
+                        <li><svg><use href="#icon-check"/></svg> Height reduction and thinning</li>
+                        <li><svg><use href="#icon-check"/></svg> Cleanup and debris removal</li>
+                        <li><svg><use href="#icon-check"/></svg> Seasonal maintenance schedules available</li>
                     </ul>
-                    <div class="pricing-note">
-                        <strong>💡 Pricing:</strong> Based on linear footage and height. Most residential jobs range from $75-$200.
-                    </div>
+                    <div class="pricing-note"><strong>Pricing:</strong> Based on linear footage and height. Most residential jobs range from $75-$200.</div>
                     <div style="margin-top: 2rem;">
                         <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
                         <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
                     </div>
                 </div>
                 <div class="service-detail-image">
-                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
-                        <span>📸 Hedge Trimming Photo</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80" alt="Hedge trimming service">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mulch & Garden Beds -->
     <section class="service-detail" id="mulch">
         <div class="container">
             <div class="service-detail-grid">
                 <div class="service-detail-content">
-                    <div class="service-detail-icon">🪴</div>
+                    <svg class="service-detail-icon"><use href="#icon-plant"/></svg>
                     <h2>Mulch & Garden Beds</h2>
                     <p>Fresh mulch not only looks great—it protects your plants, retains moisture, and suppresses weeds. We install and maintain beautiful garden beds.</p>
                     <ul class="service-features">
-                        <li>Mulch delivery and installation</li>
-                        <li>Multiple mulch types available (cedar, pine, coloured)</li>
-                        <li>Garden bed edging and definition</li>
-                        <li>Weed removal before mulching</li>
-                        <li>Seasonal bed maintenance</li>
-                        <li>Top-dressing existing beds</li>
+                        <li><svg><use href="#icon-check"/></svg> Mulch delivery and installation</li>
+                        <li><svg><use href="#icon-check"/></svg> Multiple mulch types available</li>
+                        <li><svg><use href="#icon-check"/></svg> Garden bed edging and definition</li>
+                        <li><svg><use href="#icon-check"/></svg> Weed removal before mulching</li>
+                        <li><svg><use href="#icon-check"/></svg> Seasonal bed maintenance</li>
+                        <li><svg><use href="#icon-check"/></svg> Top-dressing existing beds</li>
                     </ul>
-                    <div class="pricing-note">
-                        <strong>💡 Pricing:</strong> $85-$120 per cubic yard installed, including delivery and cleanup.
-                    </div>
+                    <div class="pricing-note"><strong>Pricing:</strong> $85-$120 per cubic yard installed, including delivery and cleanup.</div>
                     <div style="margin-top: 2rem;">
                         <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
                         <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
                     </div>
                 </div>
                 <div class="service-detail-image">
-                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
-                        <span>📸 Mulch & Garden Photo</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?w=800&q=80" alt="Mulch and garden bed installation">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pet Waste Removal -->
     <section class="service-detail" id="pet-waste">
         <div class="container">
             <div class="service-detail-grid">
                 <div class="service-detail-content">
-                    <div class="service-detail-icon">🐕</div>
+                    <svg class="service-detail-icon"><use href="#icon-paw"/></svg>
                     <h2>Pet Waste Removal</h2>
                     <p>Enjoy your yard without the mess. Our pet waste removal service keeps your lawn clean, sanitary, and ready for family time.</p>
                     <ul class="service-features">
-                        <li>Weekly or bi-weekly yard cleanup</li>
-                        <li>One-time deep cleanings available</li>
-                        <li>Disposal included (we take it with us)</li>
-                        <li>Sanitizing spray available</li>
-                        <li>Flexible scheduling</li>
-                        <li>Perfect for busy pet owners</li>
+                        <li><svg><use href="#icon-check"/></svg> Weekly or bi-weekly yard cleanup</li>
+                        <li><svg><use href="#icon-check"/></svg> One-time deep cleanings available</li>
+                        <li><svg><use href="#icon-check"/></svg> Disposal included</li>
+                        <li><svg><use href="#icon-check"/></svg> Sanitizing spray available</li>
+                        <li><svg><use href="#icon-check"/></svg> Flexible scheduling</li>
+                        <li><svg><use href="#icon-check"/></svg> Perfect for busy pet owners</li>
                     </ul>
-                    <div class="pricing-note">
-                        <strong>💡 Pricing:</strong> Starting at $20/week for one dog. Discounts for multiple dogs and prepaid packages.
-                    </div>
+                    <div class="pricing-note"><strong>Pricing:</strong> Starting at $20/week for one dog. Discounts for multiple dogs.</div>
                     <div style="margin-top: 2rem;">
                         <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
                         <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
                     </div>
                 </div>
                 <div class="service-detail-image">
-                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
-                        <span>📸 Clean Yard Photo</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80" alt="Clean backyard for pets">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seasonal Cleanup -->
     <section class="service-detail" id="seasonal">
         <div class="container">
             <div class="service-detail-grid">
                 <div class="service-detail-content">
-                    <div class="service-detail-icon">🍂</div>
+                    <svg class="service-detail-icon"><use href="#icon-calendar"/></svg>
                     <h2>Seasonal Cleanup</h2>
                     <p>Spring and fall cleanups prepare your yard for the season ahead. We handle the heavy lifting so you don't have to.</p>
                     <ul class="service-features">
-                        <li><strong>Spring Cleanup:</strong> Remove winter debris, cut back perennials, prepare beds</li>
-                        <li><strong>Fall Cleanup:</strong> Leaf removal, cut back plants, winter preparation</li>
-                        <li>Dead plant and branch removal</li>
-                        <li>Bed edging and redefinition</li>
-                        <li>Complete debris removal</li>
-                        <li>One-time or recurring service</li>
+                        <li><svg><use href="#icon-check"/></svg> Spring cleanup: remove winter debris, prepare beds</li>
+                        <li><svg><use href="#icon-check"/></svg> Fall cleanup: leaf removal, winter preparation</li>
+                        <li><svg><use href="#icon-check"/></svg> Dead plant and branch removal</li>
+                        <li><svg><use href="#icon-check"/></svg> Bed edging and redefinition</li>
+                        <li><svg><use href="#icon-check"/></svg> Complete debris removal</li>
+                        <li><svg><use href="#icon-check"/></svg> One-time or recurring service</li>
                     </ul>
-                    <div class="pricing-note">
-                        <strong>💡 Pricing:</strong> Spring/fall cleanups start at $200 for average properties. Based on yard size and condition.
-                    </div>
+                    <div class="pricing-note"><strong>Pricing:</strong> Spring/fall cleanups start at $200. Based on yard size and condition.</div>
                     <div style="margin-top: 2rem;">
                         <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
                         <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
                     </div>
                 </div>
                 <div class="service-detail-image">
-                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
-                        <span>📸 Seasonal Cleanup Photo</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=800&q=80" alt="Seasonal yard cleanup">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Leaf Removal -->
     <section class="service-detail" id="leaf-removal">
         <div class="container">
             <div class="service-detail-grid">
                 <div class="service-detail-content">
-                    <div class="service-detail-icon">🍁</div>
+                    <svg class="service-detail-icon"><use href="#icon-leaf"/></svg>
                     <h2>Leaf Removal</h2>
-                    <p>Don't let fallen leaves smother your lawn. Our thorough leaf removal service keeps your property neat through the autumn months.</p>
+                    <p>Don't let fallen leaves smother your lawn. Our thorough leaf removal service keeps your property neat through autumn.</p>
                     <ul class="service-features">
-                        <li>Complete leaf collection from lawn and beds</li>
-                        <li>Blowing and raking of all areas</li>
-                        <li>Curb-side bagging for municipal pickup</li>
-                        <li>Or we haul away the leaves</li>
-                        <li>One-time or weekly service</li>
-                        <li>Gutter cleaning available as add-on</li>
+                        <li><svg><use href="#icon-check"/></svg> Complete leaf collection from lawn and beds</li>
+                        <li><svg><use href="#icon-check"/></svg> Blowing and raking of all areas</li>
+                        <li><svg><use href="#icon-check"/></svg> Curb-side bagging for pickup</li>
+                        <li><svg><use href="#icon-check"/></svg> Or we haul away the leaves</li>
+                        <li><svg><use href="#icon-check"/></svg> One-time or weekly service</li>
+                        <li><svg><use href="#icon-check"/></svg> Gutter cleaning available as add-on</li>
                     </ul>
-                    <div class="pricing-note">
-                        <strong>💡 Pricing:</strong> One-time removal from $150. Weekly service available during peak season.
-                    </div>
+                    <div class="pricing-note"><strong>Pricing:</strong> One-time removal from $150. Weekly service available during peak season.</div>
                     <div style="margin-top: 2rem;">
                         <a href="tel:2898150431" class="btn btn-primary">Call for a Quote</a>
                         <a href="contact.html" class="btn btn-secondary" style="margin-left: 1rem;">Request Online</a>
                     </div>
                 </div>
                 <div class="service-detail-image">
-                    <div class="image-placeholder" style="aspect-ratio: 4/3;">
-                        <span>📸 Leaf Removal Photo</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?w=800&q=80" alt="Autumn leaf removal">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
                 <h2>Not Sure What You Need?</h2>
                 <p>Call Sarah anytime at <strong>(289) 815-0431</strong> and Jon will help you figure out the right services for your yard.</p>
                 <div class="cta-buttons">
-                    <a href="tel:2898150431" class="btn btn-large btn-white">
-                        <span>📞 Call (289) 815-0431</span>
-                    </a>
+                    <a href="tel:2898150431" class="btn btn-large btn-white"><span>Call (289) 815-0431</span></a>
                     <a href="contact.html" class="btn btn-large btn-outline-white">Request a Quote Online</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <span class="logo-icon">🍀</span>
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
                         <span class="logo-text">Rake & Clover</span>
                     </a>
-                    <p>Professional landscaping services in Hamilton, Stoney Creek & Grimsby.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -297,30 +272,20 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#lawn-care">Lawn Care</a></li>
-                        <li><a href="services.html#hedge-trimming">Hedge Trimming</a></li>
-                        <li><a href="services.html#mulch">Mulch & Garden Beds</a></li>
-                        <li><a href="services.html#seasonal">Seasonal Cleanup</a></li>
-                    </ul>
-                </div>
                 <div class="footer-contact">
                     <h4>Contact</h4>
-                    <p><a href="tel:2898150431">📞 (289) 815-0431</a></p>
+                    <p><a href="tel:2898150431"><svg class="icon-inline"><use href="#icon-phone"/></svg> (289) 815-0431</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Rake & Clover Landscaping</p>
-                <p class="credit">Website by <a href="https://hydetech.ca" target="_blank">Hyde Tech Solutions</a></p>
             </div>
         </div>
     </footer>
 
     <div class="mobile-call-bar">
         <a href="tel:2898150431" class="mobile-call-btn">
-            <span>📞</span>
+            <svg class="icon"><use href="#icon-phone"/></svg>
             <span>Call Now</span>
         </a>
     </div>

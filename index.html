@@ -12,12 +12,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- SVG Icons Sprite -->
+    <svg style="display: none;">
+        <defs>
+            <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+            <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+            <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+            <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+            <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+            <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+            <symbol id="icon-lawn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20M2 22l2-8 3 8M9 22l3-12 3 12M16 22l3-8 2 8M2 12h20"/></symbol>
+            <symbol id="icon-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></symbol>
+            <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+            <symbol id="icon-plant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.6 3.2-.6 4.4.3 1.1.8 1.9 2.3 2.4 4.5-3.1.5-5.1-.2-6.2-1.1"/></symbol>
+            <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+            <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+        </defs>
+    </svg>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <span class="logo-icon">🍀</span>
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     <span class="logo-text">Rake & Clover</span>
                 </a>
                 <button class="nav-toggle" aria-label="Toggle navigation">
@@ -33,7 +51,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <a href="tel:2898150431" class="btn btn-primary nav-cta">
-                    <span class="phone-icon">📞</span>
+                    <svg class="icon phone-icon"><use href="#icon-phone"/></svg>
                     <span class="phone-text">(289) 815-0431</span>
                 </a>
             </nav>
@@ -42,7 +60,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80'); background-size: cover; background-position: center;">
             <div class="hero-overlay"></div>
         </div>
         <div class="container">
@@ -58,15 +76,15 @@
                 </div>
                 <div class="hero-trust">
                     <div class="trust-item">
-                        <span class="trust-icon">✓</span>
+                        <svg class="trust-icon"><use href="#icon-check"/></svg>
                         <span>Fully Insured</span>
                     </div>
                     <div class="trust-item">
-                        <span class="trust-icon">★</span>
+                        <svg class="trust-icon star-icon"><use href="#icon-star"/></svg>
                         <span>5-Star Rated</span>
                     </div>
                     <div class="trust-item">
-                        <span class="trust-icon">🕐</span>
+                        <svg class="trust-icon"><use href="#icon-clock"/></svg>
                         <span>Reliable & On-Time</span>
                     </div>
                 </div>
@@ -82,7 +100,7 @@
     <section class="ai-banner">
         <div class="container">
             <div class="ai-banner-content">
-                <div class="ai-icon">🤖</div>
+                <svg class="ai-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
                 <div class="ai-text">
                     <strong>Meet Sarah — Your 24/7 Assistant</strong>
                     <span>Call anytime and Sarah will take your message. Jon calls you back personally.</span>
@@ -102,37 +120,37 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🌿</div>
+                    <svg class="service-icon"><use href="#icon-lawn"/></svg>
                     <h3>Lawn Care</h3>
                     <p>Regular mowing, edging, and fertilizing to keep your lawn healthy and green all season long.</p>
                     <a href="services.html#lawn-care" class="link-arrow">Learn more →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">✂️</div>
+                    <svg class="service-icon"><use href="#icon-scissors"/></svg>
                     <h3>Hedge Trimming</h3>
                     <p>Precision trimming and shaping of hedges, shrubs, and bushes for a polished look.</p>
                     <a href="services.html#hedge-trimming" class="link-arrow">Learn more →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🪴</div>
+                    <svg class="service-icon"><use href="#icon-plant"/></svg>
                     <h3>Mulch & Garden Beds</h3>
                     <p>Fresh mulch installation and garden bed maintenance to beautify and protect your plants.</p>
                     <a href="services.html#mulch" class="link-arrow">Learn more →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🐕</div>
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12s2-4 4-4 4 4 4 4-2 4-4 4-4-4-4-4Z"/></svg>
                     <h3>Pet Waste Removal</h3>
                     <p>Regular cleanup of pet waste from your yard so you can enjoy your outdoor space.</p>
                     <a href="services.html#pet-waste" class="link-arrow">Learn more →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🍂</div>
+                    <svg class="service-icon"><use href="#icon-calendar"/></svg>
                     <h3>Seasonal Cleanup</h3>
                     <p>Spring and fall cleanup services to prepare your yard for the changing seasons.</p>
                     <a href="services.html#seasonal" class="link-arrow">Learn more →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🍁</div>
+                    <svg class="service-icon"><use href="#icon-leaf"/></svg>
                     <h3>Leaf Removal</h3>
                     <p>Complete leaf cleanup and removal to keep your property neat and tidy in autumn.</p>
                     <a href="services.html#leaf-removal" class="link-arrow">Learn more →</a>
@@ -154,28 +172,28 @@
                     <p>At Rake & Clover, we treat every property like it's our own. That means showing up on time, doing thorough work, and leaving your yard looking its best.</p>
                     <ul class="feature-list">
                         <li>
-                            <span class="feature-icon">✓</span>
+                            <svg class="feature-icon"><use href="#icon-check"/></svg>
                             <div>
                                 <strong>Reliable Scheduling</strong>
                                 <span>We show up when we say we will. No surprises, no waiting around.</span>
                             </div>
                         </li>
                         <li>
-                            <span class="feature-icon">✓</span>
+                            <svg class="feature-icon"><use href="#icon-check"/></svg>
                             <div>
                                 <strong>Fair, Transparent Pricing</strong>
                                 <span>Clear quotes upfront. No hidden fees or unexpected charges.</span>
                             </div>
                         </li>
                         <li>
-                            <span class="feature-icon">✓</span>
+                            <svg class="feature-icon"><use href="#icon-check"/></svg>
                             <div>
                                 <strong>Fully Insured</strong>
                                 <span>Peace of mind knowing you're protected.</span>
                             </div>
                         </li>
                         <li>
-                            <span class="feature-icon">✓</span>
+                            <svg class="feature-icon"><use href="#icon-check"/></svg>
                             <div>
                                 <strong>Local & Independent</strong>
                                 <span>Hamilton-based, serving our community with pride.</span>
@@ -185,9 +203,7 @@
                     <a href="about.html" class="btn btn-secondary">Meet Jon</a>
                 </div>
                 <div class="why-us-image">
-                    <div class="image-placeholder">
-                        <span>📸 Photo of Jon at work</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80" alt="Landscaper working in garden" class="rounded-image">
                 </div>
             </div>
         </div>
@@ -203,24 +219,16 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item large">
-                    <div class="image-placeholder">
-                        <span>📸 Before/After Lawn</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=80" alt="Lawn transformation">
                 </div>
                 <div class="gallery-item">
-                    <div class="image-placeholder">
-                        <span>📸 Garden Bed</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?w=600&q=80" alt="Garden bed">
                 </div>
                 <div class="gallery-item">
-                    <div class="image-placeholder">
-                        <span>📸 Hedge Work</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80" alt="Hedge work">
                 </div>
                 <div class="gallery-item">
-                    <div class="image-placeholder">
-                        <span>📸 Cleanup</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=600&q=80" alt="Seasonal cleanup">
                 </div>
             </div>
             <div class="section-cta">
@@ -238,7 +246,13 @@
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                    </div>
                     <p class="testimonial-text">"Jon transformed our overgrown backyard into a space we actually want to spend time in. Reliable, professional, and the lawn has never looked better."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">SM</div>
@@ -249,7 +263,13 @@
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                    </div>
                     <p class="testimonial-text">"Finally found a landscaper who shows up when they say they will. The weekly lawn care service has been fantastic — my neighbours have noticed!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">DK</div>
@@ -260,7 +280,13 @@
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                        <svg><use href="#icon-star"/></svg>
+                    </div>
                     <p class="testimonial-text">"The fall cleanup was thorough and fairly priced. Jon even gave me tips on preparing my garden for winter. Highly recommend!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">JP</div>
@@ -286,20 +312,17 @@
                     <h2 class="section-title">Serving Hamilton & Surrounding Communities</h2>
                     <p>We provide landscaping services throughout the Greater Hamilton area, including:</p>
                     <ul class="location-list">
-                        <li><span class="location-icon">📍</span> Hamilton</li>
-                        <li><span class="location-icon">📍</span> Stoney Creek</li>
-                        <li><span class="location-icon">📍</span> Grimsby</li>
-                        <li><span class="location-icon">📍</span> Ancaster</li>
-                        <li><span class="location-icon">📍</span> Dundas</li>
-                        <li><span class="location-icon">📍</span> Binbrook</li>
+                        <li><svg class="location-icon"><use href="#icon-map-pin"/></svg> Hamilton</li>
+                        <li><svg class="location-icon"><use href="#icon-map-pin"/></svg> Stoney Creek</li>
+                        <li><svg class="location-icon"><use href="#icon-map-pin"/></svg> Grimsby</li>
+                        <li><svg class="location-icon"><use href="#icon-map-pin"/></svg> Ancaster</li>
+                        <li><svg class="location-icon"><use href="#icon-map-pin"/></svg> Dundas</li>
+                        <li><svg class="location-icon"><use href="#icon-map-pin"/></svg> Binbrook</li>
                     </ul>
                     <p class="location-note">Not sure if we service your area? Give us a call — we likely do!</p>
                 </div>
                 <div class="service-area-map">
-                    <div class="map-placeholder">
-                        <span>🗺️ Interactive Map</span>
-                        <small>Hamilton & surrounding area</small>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80" alt="Hamilton Ontario area map" class="rounded-image">
                 </div>
             </div>
         </div>
@@ -313,7 +336,7 @@
                 <p>Call Sarah anytime at <strong>(289) 815-0431</strong> and Jon will get back to you promptly with a free quote.</p>
                 <div class="cta-buttons">
                     <a href="tel:2898150431" class="btn btn-large btn-white">
-                        <span>📞 Call (289) 815-0431</span>
+                        <span>Call (289) 815-0431</span>
                     </a>
                     <a href="contact.html" class="btn btn-large btn-outline-white">Request a Quote Online</a>
                 </div>
@@ -327,14 +350,14 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <span class="logo-icon">🍀</span>
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         <span class="logo-text">Rake & Clover</span>
                     </a>
                     <p>Professional landscaping services in Hamilton, Stoney Creek & Grimsby. Quality work, fair prices, reliable service.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Google">🔍</a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="Google"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -360,11 +383,11 @@
                 <div class="footer-contact">
                     <h4>Contact</h4>
                     <p>
-                        <a href="tel:2898150431">📞 (289) 815-0431</a><br>
-                        <a href="mailto:jon@rakecloverlandscaping.com">✉️ jon@rakecloverlandscaping.com</a>
+                        <a href="tel:2898150431"><svg class="icon-inline"><use href="#icon-phone"/></svg> (289) 815-0431</a><br>
+                        <a href="mailto:jon@rakecloverlandscaping.com"><svg class="icon-inline"><use href="#icon-mail"/></svg> jon@rakecloverlandscaping.com</a>
                     </p>
                     <p class="service-area-text">
-                        <span>🗺️ Serving:</span><br>
+                        <svg class="icon-inline"><use href="#icon-map-pin"/></svg> Serving:<br>
                         Hamilton, Stoney Creek,<br>Grimsby & surrounding areas
                     </p>
                 </div>
@@ -379,7 +402,7 @@
     <!-- Mobile Call Bar -->
     <div class="mobile-call-bar">
         <a href="tel:2898150431" class="mobile-call-btn">
-            <span>📞</span>
+            <svg class="icon"><use href="#icon-phone"/></svg>
             <span>Call Now</span>
         </a>
     </div>
