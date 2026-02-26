@@ -489,15 +489,13 @@ p {
     gap: 0.5rem;
 }
 
-.trust-icon {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-accent);
-    border-radius: 50%;
-    font-size: 0.75rem;
+.hero-trust .trust-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: none;
+    border-radius: 0;
+    color: var(--color-accent);
 }
 
 .scroll-indicator {
