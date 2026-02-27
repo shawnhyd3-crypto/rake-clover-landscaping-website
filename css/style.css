@@ -1221,3 +1221,15 @@ section {
     color: var(--color-text-muted);
     font-size: 0.9rem;
 }
+
+
+/* Hero CTA sizing */
+@media (min-width: 768px) {
+  .hero-ctas {
+    align-items: stretch;
+  }
+  .hero-ctas .btn {
+    flex: 1;
+    min-width: 220px;
+  }
+}
