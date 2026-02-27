@@ -41,6 +41,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+
+    // Booking form handling (mailto fallback for GitHub Pages)
+    const bookingForm = document.getElementById('bookingForm');
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = new FormData(bookingForm);
+            const subject = encodeURIComponent('Booking Request - Rake & Clover Landscaping');
+            const body = encodeURIComponent(
+                `Name: ${data.get('name')}
+` +
+                `Email: ${data.get('email')}
+` +
+                `Phone: ${data.get('phone') || ''}
+` +
+                `Address/City: ${data.get('address')}
+` +
+                `Service: ${data.get('service')}
+
+` +
+                `Notes: ${data.get('notes') || ''}`
+            );
+            window.location.href = `mailto:support@rakecloverlandscaping.com?subject=${subject}&body=${body}`;
+        });
+    }
+
     // Contact form handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
