@@ -534,6 +534,18 @@ p {
     color: var(--color-white);
 }
 
+/* Improve contrast for the AI banner CTA */
+.ai-banner .btn-accent {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-primary-dark);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.ai-banner .btn-accent:hover {
+    background: var(--color-white);
+    color: var(--color-primary-dark);
+}
+
 .ai-banner-content {
     display: flex;
     align-items: center;
