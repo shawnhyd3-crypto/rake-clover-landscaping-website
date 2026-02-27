@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0d3b2e"/>
+  <!-- three simple blades of grass -->
+  <path d="M20 52 C18 40, 20 30, 26 18 C27 29, 27 40, 24 52 Z" fill="#58c26b"/>
+  <path d="M32 52 C30 38, 34 24, 42 14 C42 28, 40 41, 36 52 Z" fill="#7be089"/>
+  <path d="M44 52 C43 41, 46 31, 52 22 C52 32, 49 44, 47 52 Z" fill="#58c26b"/>
+</svg>
