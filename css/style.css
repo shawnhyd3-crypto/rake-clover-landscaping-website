@@ -1262,6 +1262,34 @@ section {
 }
 
 
+/* FAQ */
+.faq-section {
+  background: var(--color-bg-alt);
+}
+
+.faq-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.faq-item {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.faq-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
 /* Hero CTA sizing */
 @media (min-width: 768px) {
   .hero-ctas {
