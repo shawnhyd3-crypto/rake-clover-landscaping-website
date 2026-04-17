@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shawnhyd3-crypto.github.io/rake-clover-landscaping-website/sitemap.xml
+Sitemap: https://rakecloverlandscaping.com/sitemap.xml

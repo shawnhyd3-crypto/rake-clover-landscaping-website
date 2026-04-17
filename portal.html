@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="canonical" href="https://shawnhyd3-crypto.github.io/rake-clover-landscaping-website/portal.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="canonical" href="https://rakecloverlandscaping.com/portal.html">
   <title>Client Portal | Rake & Clover Landscaping</title>
   <meta name="description" content="Client portal for existing Rake & Clover customers.">
   <link rel="stylesheet" href="css/style.css">
@@ -34,24 +34,40 @@
   <section class="page-header" style="background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%); color: white; padding: 140px 0 80px; text-align: center;">
     <div class="container">
       <span class="section-label" style="color: var(--color-accent);">Client Portal</span>
-      <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem;">Sign In</h1>
-      <p style="font-size: 1.25rem; opacity: 0.9; max-width: 720px; margin: 0 auto;">Manage upcoming visits, service requests, and updates through our Jobber client portal.</p>
+      <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem;">Client Portal</h1>
+      <p style="font-size: 1.25rem; opacity: 0.9; max-width: 720px; margin: 0 auto;">Sign in to view quotes, invoices, and upcoming service — or request new work anytime.</p>
     </div>
   </section>
 
   <section style="padding: 4rem 0;">
     <div class="container">
-      <div style="max-width: 760px; margin: 0 auto; background: var(--color-bg-alt); border-radius: 12px; padding: 2rem;">
-        <h2 style="margin-top: 0; color: var(--color-primary-dark);">Client Portal Access</h2>
-        <p style="margin-top: 0; color: var(--color-text);">Use the buttons below to access booking and account options.</p>
-        <div style="display:flex; gap: 1rem; flex-wrap: wrap;">
-          <a class="btn btn-primary" href="index.html#booking">Book Service</a>
-          <a class="btn btn-secondary" href="mailto:support@rakecloverlandscaping.com?subject=Client%20Portal%20Access">Portal Access Help</a>
-          <a class="btn btn-secondary" href="mailto:support@rakecloverlandscaping.com">Email Support</a>
+      <div style="max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+
+        <div style="background: var(--color-bg-alt); border-radius: 12px; padding: 2rem;">
+          <h2 style="margin-top: 0; color: var(--color-primary-dark);">Existing Clients</h2>
+          <p style="color: var(--color-text);">Sign in to see quotes, invoices, appointments, and pay online.</p>
+          <a class="btn btn-primary" href="https://clienthub.getjobber.com/client_hubs/1b58b81e-cdf5-4b91-8c68-4f1d2977c3e0/login/new?source=share_login" target="_blank" rel="noopener">Sign In to Client Hub</a>
         </div>
+
+        <div style="background: var(--color-bg-alt); border-radius: 12px; padding: 2rem;">
+          <h2 style="margin-top: 0; color: var(--color-primary-dark);">New Customers</h2>
+          <p style="color: var(--color-text);">Not a customer yet? Request a quote and we'll get back to you quickly.</p>
+          <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+        </div>
+
+      </div>
+
+      <div style="max-width: 760px; margin: 2rem auto 0; text-align: center;">
+        <p style="color: var(--color-text-muted);">Need help? <a href="mailto:support@rakecloverlandscaping.com" style="color: var(--color-primary-dark); font-weight: 600;">Email support</a></p>
       </div>
     </div>
   </section>
+
+  <style>
+    @media (max-width: 700px) {
+      section .container > div[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+    }
+  </style>
 
   <footer class="footer">
     <div class="container">
