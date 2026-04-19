@@ -66,6 +66,18 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+
+    // Meta Pixel: fire Lead event on booking CTA clicks (lead-intent proxy).
+    // The Jobber work-request form is a cross-origin iframe, so we can't
+    // observe submits directly. Full submit tracking requires Jobber webhook
+    // → Zapier → Meta Conversions API (server-side) — future improvement.
+    document.querySelectorAll('a[href*="#booking"]').forEach(link => {
+        link.addEventListener('click', function() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+            }
+        });
+    });
 });
 
 // CSS class for animated elements
