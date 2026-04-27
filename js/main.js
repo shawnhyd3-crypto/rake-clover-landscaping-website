@@ -71,8 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // The Jobber work-request form is a cross-origin iframe, so we can't
     // observe submits directly. Full submit tracking requires Jobber webhook
     // → Zapier → Meta Conversions API (server-side) — future improvement.
+    // Dedup: fire at most once per page load so a curious visitor clicking
+    // multiple "Get a Quote" CTAs doesn't inflate the Lead count.
     document.querySelectorAll('a[href*="#booking"]').forEach(link => {
         link.addEventListener('click', function() {
+            if (window.__rcLeadFired) return;
+            window.__rcLeadFired = true;
             if (typeof fbq === 'function') {
                 fbq('track', 'Lead');
             }
