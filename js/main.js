@@ -67,18 +67,28 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Meta Pixel: fire Lead event on booking CTA clicks (lead-intent proxy).
+    // Lead-intent proxy: fire Lead in Meta + generate_lead in GA4 on booking CTA clicks.
     // The Jobber work-request form is a cross-origin iframe, so we can't
     // observe submits directly. Full submit tracking requires Jobber webhook
-    // → Zapier → Meta Conversions API (server-side) — future improvement.
+    // → Zapier → Meta Conversions API / GA4 Measurement Protocol (server-side).
     // Dedup: fire at most once per page load so a curious visitor clicking
     // multiple "Get a Quote" CTAs doesn't inflate the Lead count.
     document.querySelectorAll('a[href*="#booking"]').forEach(link => {
         link.addEventListener('click', function() {
             if (window.__rcLeadFired) return;
             window.__rcLeadFired = true;
+
+            // Meta Pixel — Lead event
             if (typeof fbq === 'function') {
                 fbq('track', 'Lead');
+            }
+
+            // GA4 — generate_lead event (built-in spec)
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    'currency': 'CAD',
+                    'value': 50.0
+                });
             }
         });
     });
